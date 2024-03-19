@@ -17,18 +17,19 @@ class Bootcamp {
             console.log('Invalid name or email');
             return false;
         }
-    }
 
-    for(existingStudent of this.students) {  //unclear if you need the variable declaration word const, let or var
-        if (student.email === studentToRegister.email) {
-            console.log("email is already registered");
-            return false;
+        for(cost existingStudent of this.students) {  //unclear if you need the variable declaration word const, let or var
+            if (existingStudent.email === studentToRegister.email) {
+                console.log("email is already registered");
+                return false;
+            }
         }
+
+        this.students.push(studentToRegister);
+        console.log(`${studentToRegister.name} registered successfully!`);
+        return true;
     }
 
-    this.students.push(studentToRegister);
-    console.log(`${studentToRegister.name} registered successfully!`);
-    return true;
 
     listStudents() {
         if(this.students.length === 0) {
@@ -55,7 +56,7 @@ if ( testStudent.studentName === 'Bugs Bunny' && testStudent.email === 'bugs@bun
 
 reactBootcamp = new Bootcamp("React", "Advanced");
 console.log(reactBootcamp);
-if ( reactBootcamp.name === 'React' && reactBootcamp.level === 'Advanced'
+if ( reactBootcamp.campName === 'React' && reactBootcamp.level === 'Advanced'
         && Array.isArray(reactBootcamp.students) && reactBootcamp.students.length === 0) {
     console.log('TASK 2: PASS');
 }
