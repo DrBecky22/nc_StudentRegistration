@@ -18,7 +18,7 @@ class Bootcamp {
             return false;
         }
 
-        for(cost existingStudent of this.students) {  //unclear if you need the variable declaration word const, let or var
+        for(const existingStudent of this.students) {  //unclear if you need the variable declaration word const, let or var
             if (existingStudent.email === studentToRegister.email) {
                 console.log("email is already registered");
                 return false;
